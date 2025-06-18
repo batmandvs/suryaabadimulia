@@ -1,0 +1,252 @@
+/*---- Google Fonts ----*/
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --a-color: #317bb5;
+    --b-color: #000;
+    --c-color: #fff;
+}
+
+body {
+    overflow-x: clip;
+    font-family: 'Poppins', sans-serif;
+}
+
+a, li {
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+p, li {
+    font-size: 15px;
+    color: #333;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Kanit', sans-serif;
+    color: var(--b-color);
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    transition: .4s ease;
+}
+
+/*---- Header/Navbar ----*/
+.navbar {
+    position: fixed; /* ✅ FIXED agar tetap di atas */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px 20px;
+}
+
+a.navbar-brand {
+    width: 230px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.navbar-icon {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.navbar-icon i {
+    width: 30px;
+    height: 30px;
+    background: var(--a-color);
+    color: var(--c-color);
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+}
+
+/*---- Hero Section ----*/
+.hero-sec {
+    padding-top: 100px;
+    position: relative;
+}
+
+.hero-sec img {
+    height: 300px;
+    width: 100%;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: 50px;
+    color: var(--c-color);
+    text-align: center;
+}
+
+.hero-sec img {
+    filter: brightness(50%); /* 100% = normal, 0% = hitam total */
+}
+
+/*---- Galeri ----*/
+.gallery-sec {
+    padding-top: 180px; /* ✅ Memberi ruang agar tidak ketutup header */
+    margin-top: 40px;
+}
+
+.gallery-heading h2 {
+    background-color: #4293d1;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.gallery-box img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-box img:hover {
+    transform: scale(1.03);
+    border-color: #131212;
+}
+
+
+/*--Service Section--*/
+.mission-sec {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    background: linear-gradient(to right, #2b72ac 50%, #79acd6 50%);
+    /* Bagian kiri pakai --a-color, kanan pakai biru gelap */
+}
+
+.container-mission {
+    z-index: 2;
+    position: relative;
+}
+
+.mission-img img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.mission-text h2,
+.mission-text p {
+    padding: 0;
+    width: 85%;
+    color: var(--c-color);
+}
+
+/*--footer--*/
+.footer {
+    background: #347fbd;
+    border-top: 1px solid #fff;
+
+}
+
+.footer h4 {
+    color: var(--c-color);
+    margin-bottom: 20px;
+}
+
+.footer h2 {
+    color: var(--c-color);
+    margin-bottom: 20px;
+}
+
+.footer h5 {
+    color: var(--c-color);
+}
+
+.footer ul li {
+    color: var(--c-color);
+    margin-bottom: 8px;
+}
+
+.call-box i {
+    color: var(--c-color);
+    background: var(--b-color);
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-content: center;
+    border-radius: 100%;
+}
+
+.call-box {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.call-box a {
+    color: var(--c-color);
+    width: 80%;
+}
+
+.footer-logo {
+    width: 235px;
+    margin: 0 auto 15px;
+}
+
+.footer-icon {
+    justify-content: center;
+}
+
+.footer-icon i {
+    background: var(--b-color);
+}
+
+.footer p {
+    color: var(--c-color);
+    text-align: center;
+}
+
+.footer-box {
+    width: 75%;
+}
+
+.copyrights {
+    text-align: center;
+    padding: 10px;
+    background: #347fbd;
+    border-top: 1px solid #fff;
+}
+
+.copyrights a {
+    color: var(--c-color);
+}
