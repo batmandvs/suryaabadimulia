@@ -79,25 +79,45 @@ a.navbar-brand {
 
 /*--Hero Section--*/
 .hero-sec {
+    padding-top: 100px;
     position: relative;
     background: #0c3c64;
     padding-top: 120px; /* tambahkan jarak sesuai tinggi navbar */
+    overflow: hidden;
+}
+
+.hero-sec img {
+    width: 100%;
+    height: 500px;
+    display: block;
+    object-fit: cover;
 }
 
 .hero-text {
     position: absolute;
-    top: 20%;
-    width: 35%;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 800px;
+    color: var(--c-color);
+    text-align: center;
+    z-index: 2;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4); /* transparan agar teks lebih terbaca */
+    border-radius: 12px;
+
 }
 
 .hero-text h2 {
-    font-size: 36px;
+    font-size: 30px;
     color: var(--c-color);
 }
 
 .hero-text p {
     color: var(--c-color);
     width: 90%;
+    font-size: 13px;
 }
 
 .view {
@@ -117,15 +137,16 @@ a.navbar-brand {
     background: rgb(222, 239, 252);
     padding: 60px 0;
 }
+
 .heading {
     font-size: 50px;
     text-align: center;
 }
 
-
 .gallery-box {
     position: relative;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .gallery-text {
@@ -136,6 +157,9 @@ a.navbar-brand {
     height: 0%;
     transition: 0.4s ease-in-out;
     opacity: 0;
+    display: grid;
+    place-content: center;
+    justify-content: center;
 }
 
 .gallery-text h5 {
@@ -146,31 +170,50 @@ a.navbar-brand {
     width: 100%;
     height: 250px;
     object-fit: cover;
+    display: block;
 }
 
+/* Gambar logo3.png – Tidak terpotong dan fleksibel ukurannya */
+.gallery-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #fff; /* Opsional: untuk latar logo transparan */
+}
+
+.gallery-logo .logo-img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Hover efek tetap berfungsi */
 .gallery-box:hover .gallery-text {
     height: 100%;
     opacity: 1;
 }
 
-.gallery-text {
-    display: grid;
-    place-content: center;
-    justify-content: center;
-}
-
-.view2{
+/* Tombol lihat selengkapnya */
+.view2 {
     background: var(--c-color);
     border: 1px solid var(--b-color);
     font-size: 15px;
     padding: 5px 20px;
-    border-radius: 8px
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 20px;
 }
 
 .view2:hover {
     background: var(--b-color);
     color: var(--c-color);
 }
+
+
 /*--Service Section--*/
 .mission-sec {
     position: relative;
@@ -278,4 +321,42 @@ a.navbar-brand {
 
 .copyrights a {
     color: var(--c-color);
+}
+
+@media (max-width: 1000px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-icon {
+        display: none; /* Sembunyikan dari posisi awal */
+    }
+
+    .navbar-toggler-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .navbar-toggler-menu .navbar-icon {
+        display: flex; /* Tampilkan di dalam toggle menu */
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gallery-box img {
+        height: 180px;
+    }
+
+    .gallery-logo .logo-img {
+        max-height: 180px;
+    }
+
+    .gallery-logo {
+        padding: 10px;
+    }
 }

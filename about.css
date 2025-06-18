@@ -138,6 +138,10 @@ a.navbar-brand {
       padding: 20px;
     }
 
+    .card-body-custom li {
+        margin-bottom: 10px;
+    }
+
     .container-custom {
       background-color: #f6f6f6;
       padding: 40px 0;
@@ -223,4 +227,27 @@ a.navbar-brand {
 
 .copyrights a {
     color: var(--c-color);
+}
+
+
+@media (max-width: 1000px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-icon {
+        display: none; /* Sembunyikan dari posisi awal */
+    }
+
+    .navbar-toggler-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .navbar-toggler-menu .navbar-icon {
+        display: flex; /* Tampilkan di dalam toggle menu */
+    }
 }

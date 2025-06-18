@@ -216,3 +216,25 @@ a.navbar-brand {
 .copyrights a {
     color: var(--c-color);
 }
+
+@media (max-width: 1000px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-icon {
+        display: none; /* Sembunyikan dari posisi awal */
+    }
+
+    .navbar-toggler-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .navbar-toggler-menu .navbar-icon {
+        display: flex; /* Tampilkan di dalam toggle menu */
+    }
+}
